@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# After your site is live, replace the line below with your real URL:
+# Sitemap: https://USERNAME.github.io/REPO/sitemap.xml

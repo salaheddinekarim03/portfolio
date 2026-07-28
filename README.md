@@ -1,66 +1,50 @@
 # Salah Eddine Karim — Portfolio
 
-Personal portfolio site. Community Manager & Content Strategist, Casablanca.
-
-Plain static site: one `index.html`, two small scripts, and an `assets/` folder.
-No build step, no dependencies to install.
-
----
-
-## Put it online for free (GitHub Pages)
-
-### 1. Create the repository
-
-1. Go to [github.com/new](https://github.com/new)
-2. Repository name: `portfolio` (or `USERNAME.github.io` if you want the short URL — replace `USERNAME` with your GitHub username)
-3. Set it to **Public**
-4. Click **Create repository**
-
-### 2. Upload the files
-
-On the new repo page, click **uploading an existing file**, then drag in **everything** from the downloaded folder:
+Live portfolio site. All media (images, videos, PDFs) is served from Supabase
+Storage, so this repo holds only 5 small files — no large-file upload problems.
 
 ```
-index.html
-support.js
-image-slot.js
+index.html        the whole site
+support.js        runtime
+image-slot.js     image placeholder component
 robots.txt
-.nojekyll
-assets/          <- the whole folder
+.nojekyll         tells GitHub Pages not to run Jekyll
 ```
 
-Click **Commit changes**.
+## Publish it (GitHub Pages)
 
-> Every file is under 25 MB, so browser upload works. If the `assets` folder does not
-> drag in as a folder, open it and drag its files in after creating the folder.
+1. [github.com/new](https://github.com/new) → name it `portfolio` → **Public** → create
+2. **Add file → Upload files** → drag in all 5 files above → **Commit changes**
+3. **Settings → Pages** → Source: *Deploy from a branch* → branch **main**, folder **/ (root)** → **Save**
 
-### 3. Turn on Pages
-
-1. In the repo: **Settings** → **Pages** (left sidebar)
-2. Under *Build and deployment* → *Source*: **Deploy from a branch**
-3. Branch: **main**, folder: **/ (root)** → **Save**
-4. Wait about a minute, then reload. Your URL appears at the top:
+A minute later your URL appears:
 
 ```
 https://USERNAME.github.io/portfolio/
 ```
 
-That is your live website. Done.
+Naming the repo `USERNAME.github.io` instead gives you the shorter `username.github.io`.
 
----
+## Updating later
 
-## Updating the site later
+Edit `index.html` on GitHub (pencil icon) → **Commit changes**. Live in under a minute.
 
-Open the file on GitHub → pencil icon → edit → **Commit changes**.
-To add or replace an image or video: **Add file** → **Upload files** into `assets/`.
-Changes go live in under a minute.
+To swap a photo or video: upload the new file to the Supabase `assets` bucket using
+the **same filename**. No code change, no redeploy.
 
----
+## Media
+
+Served from:
+
+```
+https://aqzbwqmqzlomvrvxhzsl.supabase.co/storage/v1/object/public/assets/
+```
+
+The bucket must stay **public**. Filenames are referenced exactly as uploaded.
 
 ## Custom domain (optional)
 
-Buy a domain, then in **Settings → Pages → Custom domain** enter it and save.
-At your registrar, point the domain at GitHub:
+**Settings → Pages → Custom domain** → enter your domain → Save. At your registrar:
 
 | Type  | Name | Value                 |
 |-------|------|-----------------------|
@@ -72,18 +56,16 @@ At your registrar, point the domain at GitHub:
 
 Then tick **Enforce HTTPS**.
 
----
+## Two SEO touches once the URL exists
 
-## Two SEO touches once you know your URL
-
-**1. Social preview image** — in `index.html`, inside `<helmet>`, add:
+**1.** In `index.html`, inside `<helmet>`, add:
 
 ```html
 <meta property="og:url" content="https://USERNAME.github.io/portfolio/">
-<meta property="og:image" content="https://USERNAME.github.io/portfolio/assets/portrait.jpg">
+<meta property="og:image" content="https://aqzbwqmqzlomvrvxhzsl.supabase.co/storage/v1/object/public/assets/portrait.jpg">
 ```
 
-**2. Sitemap** — create `sitemap.xml` at the repo root:
+**2.** Create `sitemap.xml` at the repo root:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -92,22 +74,14 @@ Then tick **Enforce HTTPS**.
 </urlset>
 ```
 
-Then uncomment the `Sitemap:` line in `robots.txt` with the same URL.
+Then uncomment the `Sitemap:` line in `robots.txt` with that URL.
 
----
+## Alternative: Vercel
 
-## Alternative: Vercel (also free)
+[vercel.com/new](https://vercel.com/new) → import the repo → Framework preset **Other**,
+build settings empty → **Deploy**.
 
-1. [vercel.com/new](https://vercel.com/new) → import the GitHub repo
-2. Framework preset: **Other**, leave build settings empty
-3. **Deploy**
+## Still open
 
-Vercel gives you `your-project.vercel.app` and redeploys on every commit.
-
----
-
-## Still to fill in
-
-- LinkedIn URL and email address (contact buttons currently point nowhere)
-- Two full podcast episodes (reserved slots inside the Clinique du Droit case study)
-- Real testimonials (the three cards say "coming soon" on purpose)
+- Real testimonials (three cards say "coming soon" on purpose)
+- PFE report title/topic in the Experience section is generic

@@ -425,7 +425,7 @@ input::placeholder,textarea::placeholder{color:#6E675F}
             View Projects
             <svg data-ic="" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .3s ease" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
           </a>
-          <a href="https://aqzbwqmqzlomvrvxhzsl.supabase.co/storage/v1/object/public/assets/cv-salah-eddine-karim.pdf" download="Salah-Eddine-Karim-CV.pdf" data-magnet="" onMouseMove="{{ magnet }}" onMouseLeave="{{ unmagnet }}" aria-label="Download CV (PDF)" style="display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(247,232,208,.28);color:#EFEAE2;font-weight:500;font-size:15px;letter-spacing:.2px;backdrop-filter:blur(8px);transition:border-color .35s ease,background .35s ease,box-shadow .35s ease,transform .25s ease-out" style-hover="border-color:rgba(247,232,208,.6);background:rgba(247,232,208,.07);box-shadow:0 8px 30px rgba(0,0,0,.4);color:#F5F1EA">
+          <a href="https://aqzbwqmqzlomvrvxhzsl.supabase.co/storage/v1/object/public/assets/cv-salah-eddine-karim.pdf" target="_blank" rel="noopener" data-magnet="" onMouseMove="{{ magnet }}" onMouseLeave="{{ unmagnet }}" aria-label="Download CV (PDF)" style="display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(247,232,208,.28);color:#EFEAE2;font-weight:500;font-size:15px;letter-spacing:.2px;backdrop-filter:blur(8px);transition:border-color .35s ease,background .35s ease,box-shadow .35s ease,transform .25s ease-out" style-hover="border-color:rgba(247,232,208,.6);background:rgba(247,232,208,.07);box-shadow:0 8px 30px rgba(0,0,0,.4);color:#F5F1EA">
             <svg data-ic="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .3s ease" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>
             Download CV
           </a>
@@ -972,7 +972,7 @@ input::placeholder,textarea::placeholder{color:#6E675F}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
             Call Me
           </a>
-          <a href="https://aqzbwqmqzlomvrvxhzsl.supabase.co/storage/v1/object/public/assets/cv-salah-eddine-karim.pdf" download="Salah-Eddine-Karim-CV.pdf" data-magnet="" onMouseMove="{{ magnet }}" onMouseLeave="{{ unmagnet }}" aria-label="Download CV (PDF)" style="display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(247,232,208,.16);color:#A8A095;font-weight:500;font-size:15px;backdrop-filter:blur(8px);transition:border-color .35s,color .35s,transform .25s ease-out" style-hover="border-color:rgba(247,232,208,.4);color:#E8E1D6">
+          <a href="https://aqzbwqmqzlomvrvxhzsl.supabase.co/storage/v1/object/public/assets/cv-salah-eddine-karim.pdf" target="_blank" rel="noopener" data-magnet="" onMouseMove="{{ magnet }}" onMouseLeave="{{ unmagnet }}" aria-label="Download CV (PDF)" style="display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(247,232,208,.16);color:#A8A095;font-weight:500;font-size:15px;backdrop-filter:blur(8px);transition:border-color .35s,color .35s,transform .25s ease-out" style-hover="border-color:rgba(247,232,208,.4);color:#E8E1D6">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>
             Download CV
           </a>
@@ -1004,6 +1004,7 @@ input::placeholder,textarea::placeholder{color:#6E675F}
         <div style="border-radius:23px;background:rgba(15,12,11,.94);backdrop-filter:blur(14px);padding:36px;box-sizing:border-box">
           <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
             <form onSubmit="{{ submit }}" noValidate="{{ true }}" style="display:flex;flex-direction:column;gap:18px">
+              <input type="checkbox" name="botcheck" tabIndex="{{ hiddenTab }}" aria-hidden="true" style="display:none">
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:18px">
                 <div style="display:flex;flex-direction:column;gap:7px">
                   <label for="f-name" style="font-size:12.5px;font-weight:500;letter-spacing:1.4px;color:#A8A095">NAME</label>
@@ -1025,6 +1026,18 @@ input::placeholder,textarea::placeholder{color:#6E675F}
                 <textarea id="f-message" name="message" rows="{{ msgRows }}" placeholder="Tell me about your project…" style="width:100%;box-sizing:border-box;padding:13px 16px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(247,232,208,.13);color:#EFEAE2;font-family:inherit;font-size:14.5px;font-weight:300;line-height:1.6;resize:vertical;min-height:110px;transition:border-color .3s,box-shadow .3s,background .3s;outline:none" style-focus="border-color:rgba(247,232,208,.65);box-shadow:0 0 0 3px rgba(247,232,208,.1);background:rgba(255,255,255,.05)"></textarea>
                 <span role="alert" style="font-size:12.5px;font-weight:300;color:#DFA098;min-height:1em">{{ errMsg }}</span>
               </div>
+              <sc-if value="{{ hasSendErr }}" hint-placeholder-val="{{ false }}">
+                <div role="alert" style="display:flex;gap:12px;align-items:flex-start;padding:15px 17px;border-radius:13px;background:rgba(128,21,32,.14);border:1px solid rgba(192,87,98,.4)">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#DFA098" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
+                  <div style="font-size:13.5px;font-weight:300;line-height:1.6;color:#DFA098">{{ errSend }}</div>
+                </div>
+              </sc-if>
+              <sc-if value="{{ isMailtoNote }}" hint-placeholder-val="{{ false }}">
+                <div role="status" style="display:flex;gap:12px;align-items:flex-start;padding:15px 17px;border-radius:13px;background:rgba(247,232,208,.05);border:1px solid rgba(247,232,208,.24)">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F7E8D0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                  <div style="font-size:13.5px;font-weight:300;line-height:1.65;color:#D8D0C3">Opening your email app with the message ready to send. If nothing happened, write to <a href="{{ contactMailto }}" style="color:#F7E8D0;text-decoration:underline;text-underline-offset:3px">{{ contactEmail }}</a> directly.</div>
+                </div>
+              </sc-if>
               <button type="submit" disabled="{{ sending }}" data-magnet="" onMouseMove="{{ magnet }}" onMouseLeave="{{ unmagnet }}" style="cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:14px;border:none;background:linear-gradient(125deg,#A32B38,#801520 55%,#5E0F18);color:#FFF6EC;font-weight:600;font-size:15px;letter-spacing:.2px;box-shadow:0 10px 34px rgba(128,21,32,.42);transition:box-shadow .35s,filter .35s,opacity .3s,transform .25s ease-out;opacity:{{ btnOp }}" style-hover="box-shadow:0 14px 44px rgba(128,21,32,.58);filter:brightness(1.05)">
                 <sc-if value="{{ notSending }}" hint-placeholder-val="{{ true }}">Send Message<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></sc-if>
                 <sc-if value="{{ sending }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,246,236,.3);border-top-color:#FFF6EC;animation:spinSlow .8s linear infinite"></span>Sending…</sc-if>
@@ -1077,7 +1090,9 @@ input::placeholder,textarea::placeholder{color:#6E675F}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;particles&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Background&quot;},&quot;grid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Background&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:34,&quot;min&quot;:16,&quot;max&quot;:60,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Marquee&quot;}}">
 class Component extends DCLogic {
-  state = { loading: true, loaderOut: false, filter: 'all', caseId: 0, sending: false, sent: false, errName: '', errEmail: '', errMsg: '' };
+  static WEB3FORMS_KEY = 'bfc33e12-44fa-4b82-9b1c-bc1b43c36dc3';
+  static CONTACT_EMAIL = 'karimsalaheddinecontact@gmail.com';
+  state = { loading: true, loaderOut: false, filter: 'all', caseId: 0, sending: false, sent: false, errName: '', errEmail: '', errMsg: '', errSend: '' };
   componentDidMount() {
     this._tm = [];
     this._rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1290,20 +1305,61 @@ if (vids.length) {
       sending: s.sending, notSending: !s.sending, sent: s.sent, notSent: !s.sent,
       btnOp: s.sending ? 0.75 : 1,
       errName: s.errName, errEmail: s.errEmail, errMsg: s.errMsg,
-      resetForm: () => this.setState({ sent: false, sending: false, errName: '', errEmail: '', errMsg: '' }),
-      submit: e => {
+      hiddenTab: -1,
+      hasSendErr: !!s.errSend && s.errSend !== 'MAILTO',
+      isMailtoNote: s.errSend === 'MAILTO',
+      errSend: s.errSend,
+      contactEmail: Component.CONTACT_EMAIL,
+      contactMailto: 'mailto:' + Component.CONTACT_EMAIL,
+      resetForm: () => this.setState({ sent: false, sending: false, errName: '', errEmail: '', errMsg: '', errSend: '' }),
+      submit: async e => {
         e.preventDefault();
-        const fd = new FormData(e.currentTarget);
+        const form = e.currentTarget;
+        const fd = new FormData(form);
         const name = String(fd.get('name') || '').trim();
         const email = String(fd.get('email') || '').trim();
+        const company = String(fd.get('company') || '').trim();
         const msg = String(fd.get('message') || '').trim();
         const errName = name ? '' : 'Please tell me your name.';
         const errEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? '' : 'Please enter a valid email address.';
         const errMsg = msg.length >= 10 ? '' : 'A few words about your project (at least 10 characters).';
-        this.setState({ errName, errEmail, errMsg });
+        this.setState({ errName, errEmail, errMsg, errSend: '' });
         if (errName || errEmail || errMsg) return;
+        if (fd.get('botcheck')) return;
+        const key = Component.WEB3FORMS_KEY;
+        const mail = Component.CONTACT_EMAIL;
+        if (!key || key.startsWith('REPLACE_WITH')) {
+          const bodyText = 'Name: ' + name + (company ? '\nCompany: ' + company : '') + '\nEmail: ' + email + '\n\n' + msg;
+          const href = 'mailto:' + mail + '?subject=' + encodeURIComponent('Portfolio enquiry from ' + name) + '&body=' + encodeURIComponent(bodyText);
+          this.setState({ sending: true, errSend: '' });
+          const a = document.createElement('a');
+          a.href = href; a.rel = 'noopener'; a.style.display = 'none';
+          document.body.appendChild(a); a.click(); a.remove();
+          this._tm.push(setTimeout(() => this.setState({
+            sending: false,
+            errSend: 'MAILTO'
+          }), 900));
+          return;
+        }
         this.setState({ sending: true });
-        this._tm.push(setTimeout(() => this.setState({ sending: false, sent: true }), 1500));
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({
+              access_key: key,
+              subject: 'Portfolio enquiry from ' + name,
+              from_name: 'Portfolio — salaheddinekarim',
+              name, email, company: company || '—', message: msg
+            })
+          });
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok || data.success === false) throw new Error(data.message || 'Request failed');
+          if (form.reset) form.reset();
+          this.setState({ sending: false, sent: true });
+        } catch (err) {
+          this.setState({ sending: false, errSend: 'Something went wrong sending your message. Please email me directly at ' + mail + ' — or try again in a moment.' });
+        }
       },
       heroMove: e => {
         if (this._rm) return;
